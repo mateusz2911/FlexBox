@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona z Flexbox</title>
+    <style>
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            min-height: 400px; /* Minimalna wysokość dla estetyki */
+        }
+
+        nav {
+            width: 200px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            /* Flex-shrink: 0 zapobiega zgniataniu menu */
+            flex-shrink: 0;
+        }
+
+        .content {
+            /* flex: 1 sprawia, że treść zajmuje całą pozostałą przestrzeń */
+            flex: 1;
+            padding: 20px;
+        }
+
+        footer {
+            /* clear: both nie jest już potrzebne przy flexboxie! */
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            padding: 8px;
+            background-color: #ddd;
+            margin-bottom: 10px;
+        }
+
+        .content img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 600px) {
+            main {
+                flex-direction: column;
+            }
+            nav {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Strona z Flexbox</h1>
+    </header>
+    
+    <main>
+        <nav>
+            <ul>
+                <li>Menu 1</li>
+                <li>Menu 2</li>
+                <li>Menu 3</li>
+            </ul>
+        </nav>
+
+        <div class="content">
+    <h2>Flexbox - Notatka</h2>
+    <p>Model układu CSS do łatwego rozmieszczania elementów.</p>
+
+    <p><strong>Kluczowe pojęcia:</strong></p>
+    <ul>
+        <li><strong>Kontener:</strong> Element nadrzędny z display: flex.</li>
+        <li><strong>Elementy:</strong> Dzieci wewnątrz kontenera.</li>
+        <li><strong>Osie:</strong> Główna (poziom) i Krzyżowa (pion).</li>
+    </ul>
+
+    <p><strong>Główne właściwości:</strong></p>
+    <ul>
+        <li><strong>justify-content:</strong> ustawianie elementów w poziomie.</li>
+        <li><strong>align-items:</strong> ustawianie elementów w pionie.</li>
+        <li><strong>flex-direction:</strong> zmiana kierunku (wiersz lub kolumna).</li>
+        <li><strong>flex-wrap:</strong> przechodzenie elementów do nowej linii.</li>
+    </ul>
+</div>
+    </main>
+
+    <footer>
+        <p>Stopka &copy; 2026</p>
+    </footer>
+</body>
+</html>

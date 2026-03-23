@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* wyśrodkowanie poziome */
+    align-items: center;     /* wyśrodkowanie pionowe */
+}
+
+.container {
+    display: flex;
+    gap: 20px; /* odstęp między kwadratami */
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
